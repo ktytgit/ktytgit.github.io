@@ -154,7 +154,6 @@
 
     <div class="main-inner page posts-expand">
 
-
     
     
     
@@ -173,6 +172,29 @@
       
       <div class="post-body">
           
+            <!-- 日历容器：控制宽度和居中显示 -->
+            <div id="cloud-calendar" style="width: 100%; max-width: 800px; margin: 20px auto;"></div>
+
+            <!-- 加载日历JS和语言文件 -->
+            <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js" defer></script>
+            <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js" defer></script>
+
+            <!-- 初始化日历 -->
+            <script defer>
+              document.addEventListener('DOMContentLoaded', function() {
+                if (window.CloudCalendar) {
+                  new CloudCalendar({
+                    el: '#cloud-calendar',
+                    language: 'zh-CN',
+                    root: '/calendar/',
+                    single: true
+                  });
+                }
+              });
+            </script>
+          
+        
+        
       </div>
       
       
@@ -181,7 +203,6 @@
 
     
     
-
 
 </div>
   </main>
